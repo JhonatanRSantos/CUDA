@@ -45,10 +45,7 @@ int main()
     SomaVetores<<<1, tamanho>>>(cudaVetorA, cudaVetorB, cudaVetorC, tamanho);
 
     cudaMemcpy(vetorC, cudaVetorC, totalBytes, cudaMemcpyDeviceToHost);
-
-    int stop;
-    cin >> stop;
-
+   
     cudaFree(cudaVetorA);
     cudaFree(cudaVetorB);
     cudaFree(cudaVetorC);
